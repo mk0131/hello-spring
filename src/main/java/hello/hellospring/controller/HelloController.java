@@ -28,13 +28,14 @@ public class HelloController {
 
     @GetMapping("hello-api")
     @ResponseBody // 객체가 넘어오면 json 으로 변환
-    public  Hello helloApi(@RequestParam("name") String name){
+    public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
         return hello;
     }
-    static class  Hello{
-        private  String name;
+
+    static class Hello {
+        private String name;
 
         public String getName() {
             return name;
